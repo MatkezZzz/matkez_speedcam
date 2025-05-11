@@ -8,6 +8,7 @@ lib.callback.register('matkez_speedcam:napisiKaznu', function(source, cena, razl
         if Config.Framework == 'QBOX' then
             exports.qbx_core:RemoveMoney(source, 'bank', cena, razlog)
         elseif Config.Framework == 'ESX' then 
+            local xPlayer = ESX.GetPlayerFromId(source)
             xPlayer.removeAccountMoney('bank', cena)
         end
         if society then
