@@ -1,5 +1,6 @@
+local ESX
 if Config.Framework == 'ESX' then 
-    local ESX = exports.es_extended:GetSharedObject()
+    ESX = exports.es_extended:getSharedObject()
 end
 
 lib.callback.register('matkez_speedcam:napisiKaznu', function(source, cena, razlog, stash, society)
