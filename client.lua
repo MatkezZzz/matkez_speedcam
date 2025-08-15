@@ -30,9 +30,10 @@ Citizen.CreateThread(function()
                     PlaySoundFrontend(-1, 'Crash', 'DLC_HEIST_HACKING_SNAKE_SOUNDS', 1 )
                     Wait(50)
                     AnimpostfxStopAll()
-                    lib.callback.await('matkez_speedcam:napisiKaznu', false, v.cena, v.razlog, v.stash, v.society)
+                    lib.callback.await('matkez_speedcam:napisiKaznu', false, k)
                 end
             end
         end
     end
+
 end)
