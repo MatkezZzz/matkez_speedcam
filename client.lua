@@ -13,12 +13,12 @@ Citizen.CreateThread(function()
             AddTextComponentString(v.blip.ime)
             EndTextCommandSetBlipName(blip)
         end
-        local k = lib.zones.sphere({
+        local zona = lib.zones.sphere({
             coords = v.coords,
             radius = v.radius,
             debug = v.debug,
         })
-        function k:onEnter()
+        function zona:onEnter()
             local igracPed = PlayerPedId()
             if IsPedInAnyVehicle(igracPed, false) then
                 local vozilo = GetVehiclePedIsIn(igracPed, false)
@@ -35,5 +35,5 @@ Citizen.CreateThread(function()
             end
         end
     end
-
 end)
+
